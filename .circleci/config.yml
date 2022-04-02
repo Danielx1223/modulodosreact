@@ -12,6 +12,8 @@ jobs:
   build_deploy:
     docker:
       - image: 'cimg/node:17.8.0'
+    dependencies:
+     - build
     steps:
       - checkout
       - run: npm install && npm run build
