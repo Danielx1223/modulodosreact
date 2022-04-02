@@ -14,7 +14,7 @@ jobs:
       - image: 'cimg/node:17.8.0-browsers'
     steps:
       - checkout
-      - run: mpm install && npm run build
+      - run: npm install && npm run build
       - aws-s3/sync:
           arguments: |
             --acl public-read \
